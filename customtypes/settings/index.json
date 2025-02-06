@@ -6,6 +6,13 @@
   "status": true,
   "json": {
     "Main": {
+      "logo": {
+        "type": "Text",
+        "config": {
+          "label": "Logo",
+          "placeholder": ""
+        }
+      },
       "intro_quote": {
         "type": "Text",
         "config": {
