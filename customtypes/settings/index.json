@@ -1,0 +1,60 @@
+{
+  "format": "custom",
+  "id": "settings",
+  "label": "Settings",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "intro_quote": {
+        "type": "Text",
+        "config": {
+          "label": "Intro Quote",
+          "placeholder": ""
+        }
+      },
+      "sub_quote": {
+        "type": "Text",
+        "config": {
+          "label": "Sub Quote",
+          "placeholder": ""
+        }
+      },
+      "intro_ui": {
+        "type": "Image",
+        "config": {
+          "label": "Intro UI",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "navigation": {
+        "type": "Group",
+        "config": {
+          "label": "Navigation",
+          "repeat": true,
+          "fields": {
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null,
+                "allowTargetBlank": true,
+                "allowText": true,
+                "repeat": false
+              }
+            },
+            "link_label": {
+              "type": "Text",
+              "config": {
+                "label": "Link Label",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
