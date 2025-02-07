@@ -10,7 +10,83 @@
       "docURL": "...",
       "version": "initial",
       "description": "Default",
-      "imageUrl": ""
+      "imageUrl": "",
+      "primary": {
+        "label": {
+          "type": "Text",
+          "config": {
+            "label": "Label",
+            "placeholder": ""
+          }
+        },
+        "sublabel": {
+          "type": "Text",
+          "config": {
+            "label": "Sublabel",
+            "placeholder": ""
+          }
+        },
+        "ui_cutout": {
+          "type": "Image",
+          "config": {
+            "label": "UI cutout",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "link",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "link_text": {
+          "type": "Text",
+          "config": {
+            "label": "link text",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "buttonless",
+      "name": "Buttonless",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "label": {
+          "type": "Text",
+          "config": {
+            "label": "Label",
+            "placeholder": ""
+          }
+        },
+        "sublabel": {
+          "type": "Text",
+          "config": {
+            "label": "Sublabel",
+            "placeholder": ""
+          }
+        },
+        "ui_cutout": {
+          "type": "Image",
+          "config": {
+            "label": "UI cutout",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
     }
   ]
 }

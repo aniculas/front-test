@@ -2,7 +2,100 @@
 	{
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
-		"primary": {},
+		"primary": {
+			"label": {
+				"__TYPE__": "FieldContent",
+				"value": "snow",
+				"type": "Text"
+			},
+			"ui_cutout": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+					"width": 4480,
+					"height": 4480
+				},
+				"url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+				"width": 4480,
+				"height": 4480,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"link": {
+				"key": "009d5737-b9cd-47b9-96be-61f52c86659a",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev",
+					"text": "hope"
+				}
+			},
+			"link_text": {
+				"__TYPE__": "FieldContent",
+				"value": "track",
+				"type": "Text"
+			},
+			"sublabel": {
+				"__TYPE__": "FieldContent",
+				"value": "tide",
+				"type": "Text"
+			}
+		},
 		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "buttonless",
+		"primary": {
+			"label": {
+				"__TYPE__": "FieldContent",
+				"value": "oldest",
+				"type": "Text"
+			},
+			"sublabel": {
+				"__TYPE__": "FieldContent",
+				"value": "silk",
+				"type": "Text"
+			},
+			"ui_cutout": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
+					"width": 4000,
+					"height": 6000
+				},
+				"url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
+				"width": 4000,
+				"height": 6000,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
 	}
 ]

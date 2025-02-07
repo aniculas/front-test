@@ -34,7 +34,7 @@ export default async function Header() {
                                 </li>
                             ))}
                             <li>
-                            <Button className="p-3 m-auto" field={settings.data.beta_access}>
+                            <Button className="p-3 m-auto mx-10" field={settings.data.beta_access}>
                                 {settings.data.header_button_text}
                             </Button>
                             </li>

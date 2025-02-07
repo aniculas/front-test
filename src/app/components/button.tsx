@@ -10,9 +10,9 @@ export default function Button({
     return (
         <PrismicNextLink
         className=
-        {clsx("static w-48 h-11 flex flex-row justify-center items-center gap-2 p-2",
-        "px-4 flex-none mx-10 rounded-lg shadow-lg bg-[rgb(98,20,226)] text-white",
-        "font-inter text-base font-medium leading-relaxed tracking-normal",
+        {clsx("static w-48 h-11 flex flex-row justify-center items-center gap-2",
+        "flex-none rounded-lg shadow-lg bg-[rgb(98,20,226)] text-white",
+        "font-medium leading-relaxed tracking-normal",
         "transition-all duration-300 hover:bg-purple-700 hover:shadow-purple-500/30 hover:shadow-l", className) }
         {...restProps}
         />

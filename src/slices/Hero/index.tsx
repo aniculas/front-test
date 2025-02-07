@@ -25,7 +25,7 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  */
 const Hero: FC<HeroProps> = ({ slice }) => {
   
-  console.log(slice.primary.intro_quote);
+  // console.log(slice.primary.intro_quote);
 
 
   return (

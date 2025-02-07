@@ -10,7 +10,63 @@
       "docURL": "...",
       "version": "initial",
       "description": "Default",
-      "imageUrl": ""
+      "imageUrl": "",
+      "primary": {
+        "label": {
+          "type": "Text",
+          "config": {
+            "label": "Label",
+            "placeholder": ""
+          }
+        },
+        "sublabel": {
+          "type": "Text",
+          "config": {
+            "label": "Sublabel",
+            "placeholder": ""
+          }
+        },
+        "ui_cutout": {
+          "type": "Image",
+          "config": {
+            "label": "Ui Cutout",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "cards": {
+          "type": "Group",
+          "config": {
+            "label": "Cards",
+            "repeat": true,
+            "fields": {
+              "top": {
+                "type": "Text",
+                "config": {
+                  "label": "Top",
+                  "placeholder": ""
+                }
+              },
+              "bottom": {
+                "type": "Text",
+                "config": {
+                  "label": "Bottom",
+                  "placeholder": ""
+                }
+              },
+              "symbol": {
+                "type": "Image",
+                "config": {
+                  "label": "Symbol",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
     }
   ]
 }

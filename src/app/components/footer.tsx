@@ -7,8 +7,6 @@ export default async function Footer() {
     const client = createClient();
     const footer = await client.getSingle("footer");
 
-    console.log(footer.data.navigation)
-
     return (
         <footer className="px-8 py-10 md:py-8 md:px-8 lg:py-10">
             <div className="mx-auto max-w-[85%] w-full">

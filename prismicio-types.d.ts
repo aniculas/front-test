@@ -309,6 +309,16 @@ export interface BlowUpSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   sub_label: prismic.KeyTextField;
+
+  /**
+   * BlowUp Ui field in *BlowUp → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blow_up.default.primary.blowup_ui
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  blowup_ui: prismic.ImageField<never>;
 }
 
 /**
@@ -457,6 +467,86 @@ type HeroSliceVariation = HeroSliceDefault;
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
+ * Item in *SideCards → Default → Primary → Cards*
+ */
+export interface SideCardsSliceDefaultPrimaryCardsItem {
+  /**
+   * Top field in *SideCards → Default → Primary → Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: side_cards.default.primary.cards[].top
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  top: prismic.KeyTextField;
+
+  /**
+   * Bottom field in *SideCards → Default → Primary → Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: side_cards.default.primary.cards[].bottom
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  bottom: prismic.KeyTextField;
+
+  /**
+   * Symbol field in *SideCards → Default → Primary → Cards*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: side_cards.default.primary.cards[].symbol
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  symbol: prismic.ImageField<never>;
+}
+
+/**
+ * Primary content in *SideCards → Default → Primary*
+ */
+export interface SideCardsSliceDefaultPrimary {
+  /**
+   * Label field in *SideCards → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: side_cards.default.primary.label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Sublabel field in *SideCards → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: side_cards.default.primary.sublabel
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  sublabel: prismic.KeyTextField;
+
+  /**
+   * Ui Cutout field in *SideCards → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: side_cards.default.primary.ui_cutout
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  ui_cutout: prismic.ImageField<never>;
+
+  /**
+   * Cards field in *SideCards → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: side_cards.default.primary.cards[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  cards: prismic.GroupField<Simplify<SideCardsSliceDefaultPrimaryCardsItem>>;
+}
+
+/**
  * Default variation for SideCards Slice
  *
  * - **API ID**: `default`
@@ -465,7 +555,7 @@ export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
  */
 export type SideCardsSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<SideCardsSliceDefaultPrimary>,
   never
 >;
 
@@ -487,6 +577,61 @@ export type SideCardsSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *SidePanel → Default → Primary*
+ */
+export interface SidePanelSliceDefaultPrimary {
+  /**
+   * Label field in *SidePanel → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: side_panel.default.primary.label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Sublabel field in *SidePanel → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: side_panel.default.primary.sublabel
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  sublabel: prismic.KeyTextField;
+
+  /**
+   * UI cutout field in *SidePanel → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: side_panel.default.primary.ui_cutout
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  ui_cutout: prismic.ImageField<never>;
+
+  /**
+   * link field in *SidePanel → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: side_panel.default.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+  /**
+   * link text field in *SidePanel → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: side_panel.default.primary.link_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_text: prismic.KeyTextField;
+}
+
+/**
  * Default variation for SidePanel Slice
  *
  * - **API ID**: `default`
@@ -495,14 +640,62 @@ export type SideCardsSlice = prismic.SharedSlice<
  */
 export type SidePanelSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<SidePanelSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Primary content in *SidePanel → Buttonless → Primary*
+ */
+export interface SidePanelSliceButtonlessPrimary {
+  /**
+   * Label field in *SidePanel → Buttonless → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: side_panel.buttonless.primary.label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Sublabel field in *SidePanel → Buttonless → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: side_panel.buttonless.primary.sublabel
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  sublabel: prismic.KeyTextField;
+
+  /**
+   * UI cutout field in *SidePanel → Buttonless → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: side_panel.buttonless.primary.ui_cutout
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  ui_cutout: prismic.ImageField<never>;
+}
+
+/**
+ * Buttonless variation for SidePanel Slice
+ *
+ * - **API ID**: `buttonless`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SidePanelSliceButtonless = prismic.SharedSliceVariation<
+  "buttonless",
+  Simplify<SidePanelSliceButtonlessPrimary>,
   never
 >;
 
 /**
  * Slice variation for *SidePanel*
  */
-type SidePanelSliceVariation = SidePanelSliceDefault;
+type SidePanelSliceVariation = SidePanelSliceDefault | SidePanelSliceButtonless;
 
 /**
  * SidePanel Shared Slice
@@ -556,11 +749,16 @@ declare module "@prismicio/client" {
       HeroSliceVariation,
       HeroSliceDefault,
       SideCardsSlice,
+      SideCardsSliceDefaultPrimaryCardsItem,
+      SideCardsSliceDefaultPrimary,
       SideCardsSliceVariation,
       SideCardsSliceDefault,
       SidePanelSlice,
+      SidePanelSliceDefaultPrimary,
+      SidePanelSliceButtonlessPrimary,
       SidePanelSliceVariation,
       SidePanelSliceDefault,
+      SidePanelSliceButtonless,
     };
   }
 }

@@ -25,6 +25,14 @@
             "label": "Sub label",
             "placeholder": ""
           }
+        },
+        "blowup_ui": {
+          "type": "Image",
+          "config": {
+            "label": "BlowUp Ui",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
       },
       "items": {}
