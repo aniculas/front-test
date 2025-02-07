@@ -21,19 +21,19 @@
 					"width": 8640,
 					"height": 8640
 				},
-				"url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
-				"width": 8640,
-				"height": 8640,
+				"url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?rect=0%2C3802%2C8640%2C1036&w=642&h=77",
+				"width": 642,
+				"height": 77,
 				"edit": {
 					"zoom": 1,
 					"crop": {
 						"x": 0,
-						"y": 0
+						"y": 3802
 					},
 					"background": "transparent"
 				},
 				"credits": null,
-				"alt": null,
+				"alt": "Email Field",
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
@@ -44,19 +44,19 @@
 					"width": 3882,
 					"height": 2584
 				},
-				"url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-				"width": 3882,
-				"height": 2584,
+				"url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?rect=0%2C155%2C3882%2C2273&w=1110&h=650",
+				"width": 1110,
+				"height": 650,
 				"edit": {
 					"zoom": 1,
 					"crop": {
 						"x": 0,
-						"y": 0
+						"y": 155
 					},
 					"background": "transparent"
 				},
 				"credits": null,
-				"alt": null,
+				"alt": "Piclab ui mock",
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
@@ -76,7 +76,7 @@
 			"subquote": {
 				"__TYPE__": "FieldContent",
 				"type": "Text",
-				"value": "hello"
+				"value": "Organize, transform, & serve your entire photo library. The perfect image management app for freelancers, organizations, & web developers."
 			},
 			"intro_quote": {
 				"__TYPE__": "StructuredTextContent",
@@ -90,6 +90,21 @@
 						"direction": "ltr"
 					}
 				]
+			},
+			"button_text": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Request Beta Access"
+			},
+			"button_link": {
+				"key": "732cb8c8-36a3-4ff1-acc2-d14348906232",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"target": "_blank",
+					"text": "http://google.com/"
+				}
 			}
 		},
 		"items": []
