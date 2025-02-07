@@ -1,0 +1,19 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"main_label": {
+				"__TYPE__": "FieldContent",
+				"value": "flies",
+				"type": "Text"
+			},
+			"sub_label": {
+				"__TYPE__": "FieldContent",
+				"value": "mighty",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

@@ -30,10 +30,11 @@ export async function generateMetadata(): Promise<Metadata> {
 
 
   return {
-    title: settings.data.intro_quote || "Error :(",
-    description: settings.data.intro_quote || "testing description",
+    title: settings.data.display || "Error :(",
+    description: settings.data.display || "testing description",
     openGraph: {
-      images: [settings.data.intro_ui.url || ""],
+      images: [""],
+      // images: [settings.data.intro_ui.url || ""],
     },
   }
 }
@@ -46,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={clsx(inter.variable)}>
       
-      <body>
+      <body className="bg-black text-white">
         <Header />
           {children}
         <Footer />

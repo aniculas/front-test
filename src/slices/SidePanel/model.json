@@ -1,0 +1,16 @@
+{
+  "id": "side_panel",
+  "type": "SharedSlice",
+  "name": "SidePanel",
+  "description": "SidePanel",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": ""
+    }
+  ]
+}

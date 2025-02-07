@@ -1,0 +1,33 @@
+{
+  "id": "blow_up",
+  "type": "SharedSlice",
+  "name": "BlowUp",
+  "description": "BlowUp",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "main_label": {
+          "type": "Text",
+          "config": {
+            "label": "Main_label",
+            "placeholder": ""
+          }
+        },
+        "sub_label": {
+          "type": "Text",
+          "config": {
+            "label": "Sub label",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

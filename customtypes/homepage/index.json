@@ -18,6 +18,15 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "side_panel": {
+              "type": "SharedSlice"
+            },
+            "blow_up": {
+              "type": "SharedSlice"
+            },
+            "side_cards": {
+              "type": "SharedSlice"
+            },
             "hero": {
               "type": "SharedSlice"
             }

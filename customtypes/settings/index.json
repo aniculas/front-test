@@ -6,33 +6,26 @@
   "status": true,
   "json": {
     "Main": {
+      "display": {
+        "type": "Text",
+        "config": {
+          "label": "Display",
+          "placeholder": ""
+        }
+      },
+      "logo_symbol": {
+        "type": "Image",
+        "config": {
+          "label": "logo symbol",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "logo": {
         "type": "Text",
         "config": {
           "label": "Logo",
           "placeholder": ""
-        }
-      },
-      "intro_quote": {
-        "type": "Text",
-        "config": {
-          "label": "Intro Quote",
-          "placeholder": ""
-        }
-      },
-      "sub_quote": {
-        "type": "Text",
-        "config": {
-          "label": "Sub Quote",
-          "placeholder": ""
-        }
-      },
-      "intro_ui": {
-        "type": "Image",
-        "config": {
-          "label": "Intro UI",
-          "constraint": {},
-          "thumbnails": []
         }
       },
       "navigation": {
@@ -60,6 +53,24 @@
               }
             }
           }
+        }
+      },
+      "beta_access": {
+        "type": "Link",
+        "config": {
+          "label": "Beta Access",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": true,
+          "repeat": false
+        }
+      },
+      "header_button_text": {
+        "type": "Text",
+        "config": {
+          "label": "Header Button Text",
+          "placeholder": ""
         }
       }
     }

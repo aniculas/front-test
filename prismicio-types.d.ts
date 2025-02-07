@@ -4,7 +4,90 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type HomepageDocumentDataSlicesSlice = HeroSlice;
+/**
+ * Item in *Footer → navigation*
+ */
+export interface FooterDocumentDataNavigationItem {
+  /**
+   * link label field in *Footer → navigation*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.navigation[].link_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_label: prismic.KeyTextField;
+
+  /**
+   * link field in *Footer → navigation*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.navigation[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Content for Footer documents
+ */
+interface FooterDocumentData {
+  /**
+   * logo field in *Footer*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo: prismic.ImageField<never>;
+
+  /**
+   * Copyright field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.copyright
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  copyright: prismic.KeyTextField;
+
+  /**
+   * navigation field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.navigation[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  navigation: prismic.GroupField<Simplify<FooterDocumentDataNavigationItem>>;
+}
+
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<FooterDocumentData>,
+    "footer",
+    Lang
+  >;
+
+type HomepageDocumentDataSlicesSlice =
+  | SidePanelSlice
+  | BlowUpSlice
+  | SideCardsSlice
+  | HeroSlice;
 
 /**
  * Content for Homepage documents
@@ -110,6 +193,28 @@ export interface SettingsDocumentDataNavigationItem {
  */
 interface SettingsDocumentData {
   /**
+   * Display field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.display
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  display: prismic.KeyTextField;
+
+  /**
+   * logo symbol field in *Settings*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.logo_symbol
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo_symbol: prismic.ImageField<never>;
+
+  /**
    * Logo field in *Settings*
    *
    * - **Field Type**: Text
@@ -121,39 +226,6 @@ interface SettingsDocumentData {
   logo: prismic.KeyTextField;
 
   /**
-   * Intro Quote field in *Settings*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: settings.intro_quote
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  intro_quote: prismic.KeyTextField;
-
-  /**
-   * Sub Quote field in *Settings*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: settings.sub_quote
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  sub_quote: prismic.KeyTextField;
-
-  /**
-   * Intro UI field in *Settings*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: settings.intro_ui
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  intro_ui: prismic.ImageField<never>;
-
-  /**
    * Navigation field in *Settings*
    *
    * - **Field Type**: Group
@@ -163,6 +235,34 @@ interface SettingsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   navigation: prismic.GroupField<Simplify<SettingsDocumentDataNavigationItem>>;
+
+  /**
+   * Beta Access field in *Settings*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.beta_access
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  beta_access: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * Header Button Text field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.header_button_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  header_button_text: prismic.KeyTextField;
 }
 
 /**
@@ -181,7 +281,62 @@ export type SettingsDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = HomepageDocument | SettingsDocument;
+export type AllDocumentTypes =
+  | FooterDocument
+  | HomepageDocument
+  | SettingsDocument;
+
+/**
+ * Primary content in *BlowUp → Default → Primary*
+ */
+export interface BlowUpSliceDefaultPrimary {
+  /**
+   * Main_label field in *BlowUp → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blow_up.default.primary.main_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  main_label: prismic.KeyTextField;
+
+  /**
+   * Sub label field in *BlowUp → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blow_up.default.primary.sub_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  sub_label: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for BlowUp Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BlowUpSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<BlowUpSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *BlowUp*
+ */
+type BlowUpSliceVariation = BlowUpSliceDefault;
+
+/**
+ * BlowUp Shared Slice
+ *
+ * - **API ID**: `blow_up`
+ * - **Description**: BlowUp
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BlowUpSlice = prismic.SharedSlice<"blow_up", BlowUpSliceVariation>;
 
 /**
  * Primary content in *Hero → Default → Primary*
@@ -301,6 +456,66 @@ type HeroSliceVariation = HeroSliceDefault;
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
+/**
+ * Default variation for SideCards Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SideCardsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *SideCards*
+ */
+type SideCardsSliceVariation = SideCardsSliceDefault;
+
+/**
+ * SideCards Shared Slice
+ *
+ * - **API ID**: `side_cards`
+ * - **Description**: SideCards
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SideCardsSlice = prismic.SharedSlice<
+  "side_cards",
+  SideCardsSliceVariation
+>;
+
+/**
+ * Default variation for SidePanel Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SidePanelSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *SidePanel*
+ */
+type SidePanelSliceVariation = SidePanelSliceDefault;
+
+/**
+ * SidePanel Shared Slice
+ *
+ * - **API ID**: `side_panel`
+ * - **Description**: SidePanel
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SidePanelSlice = prismic.SharedSlice<
+  "side_panel",
+  SidePanelSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -322,6 +537,9 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      FooterDocument,
+      FooterDocumentData,
+      FooterDocumentDataNavigationItem,
       HomepageDocument,
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,
@@ -329,10 +547,20 @@ declare module "@prismicio/client" {
       SettingsDocumentData,
       SettingsDocumentDataNavigationItem,
       AllDocumentTypes,
+      BlowUpSlice,
+      BlowUpSliceDefaultPrimary,
+      BlowUpSliceVariation,
+      BlowUpSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      SideCardsSlice,
+      SideCardsSliceVariation,
+      SideCardsSliceDefault,
+      SidePanelSlice,
+      SidePanelSliceVariation,
+      SidePanelSliceDefault,
     };
   }
 }

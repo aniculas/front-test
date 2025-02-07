@@ -7,7 +7,7 @@ import Button from "@/app/components/button";
 
 const components: JSXMapSerializer = {
   heading1: ({children}) => (
-    <h1 className="font-body text-5xl md:text-8xl font-extrabold leading-tight tracking-tight">
+    <h1 className="font-body text-5xl md:text-8xl font-extrabold leading-tight tracking-tight text-white">
       {children}
     </h1>
   ),
@@ -24,6 +24,10 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  * Component for "Hero" Slices.
  */
 const Hero: FC<HeroProps> = ({ slice }) => {
+  
+  console.log(slice.primary.intro_quote);
+
+
   return (
     <section
       className="px-4 py-10 md:py-14 md:px-6 lg:py-16"
@@ -34,19 +38,15 @@ const Hero: FC<HeroProps> = ({ slice }) => {
         <div className="grid grid-cols-1 place-items-center text-center">
           <PrismicRichText field={slice.primary.intro_quote} components={ components } />
 
-          <h1 className="text-center font-inter text-l md:text-2xl font-normal leading-relaxed text-[#8D8498]">{slice.primary.subquote}</h1>
+          <h1 className="text-center font-inter text-l md:text-2xl font-normal leading-relaxed text-[#8D8498]">
+            {slice.primary.subquote}
+          </h1>
           
-          {/* <Button className= "m-8 md:m-10"
-            field={slice.primary.button_link}> 
-              {slice.primary.button_text}
-          </Button> */}
 
-          <PrismicNextImage alt="" className="rounded-lg shadow-2xl m-8 md:m-10" field={slice.primary.email_field} />
+          <PrismicNextImage draggable="false" alt="" className="" field={slice.primary.email_field} />
 
           <PrismicNextImage alt="" className="rounded-lg shadow-2xl m-8 md:m-10" field={slice.primary.ui_mock} />
 
-          
-          {/* <PrismicRichText field={slice.primary.email_input} /> */}
         </div>
       </div>
     </section>

@@ -13,7 +13,7 @@ export default {
         body: ["var(--font-inter)"],
         display: ["var(--font-geist-sans)"],
         // Add more if needed here
-      }
+      },
     },
   },
   plugins: [],

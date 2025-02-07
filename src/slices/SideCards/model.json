@@ -1,0 +1,16 @@
+{
+  "id": "side_cards",
+  "type": "SharedSlice",
+  "name": "SideCards",
+  "description": "SideCards",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": ""
+    }
+  ]
+}
