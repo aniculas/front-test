@@ -36,13 +36,13 @@ const Hero: FC<HeroProps> = ({ slice }) => {
 
           <h1 className="text-center font-inter text-l md:text-2xl font-normal leading-relaxed text-[#8D8498]">{slice.primary.subquote}</h1>
           
-          <Button className= "m-8 md:m-10"
+          {/* <Button className= "m-8 md:m-10"
             field={slice.primary.button_link}> 
               {slice.primary.button_text}
-          </Button>
+          </Button> */}
 
           <PrismicNextImage alt="" className="rounded-lg shadow-2xl m-8 md:m-10" field={slice.primary.email_field} />
-          
+
           <PrismicNextImage alt="" className="rounded-lg shadow-2xl m-8 md:m-10" field={slice.primary.ui_mock} />
 
           
