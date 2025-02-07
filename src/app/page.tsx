@@ -1,11 +1,37 @@
-import Image from "next/image";
+import { Metadata } from "next";
+import { isFilled, asImageSrc } from "@prismicio/client";
+import { SliceZone } from "@prismicio/react";
 
-export default function Home() {
-  return (
-    <div>
-      <main>
-        <h1 className="font-body text-5xl">hello!</h1>
-      </main>
-    </div>
-  );
+import { createClient } from "@/prismicio";
+// import { components } from "@/slices";
+
+export default async function Page() {
+  const client = createClient();
+  const page = await client.getSingle("homepage");
+
+  return <div className="text-red-500"> Placeholder </div>
+
+  // return <SliceZone slices={page.data.slices} components={components} />;
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const client = createClient();
+  const page = await client.getSingle("homepage");
+
+  return {
+    title: page.data.meta_title,
+    description: page.data.meta_description,
+    
+    openGraph: {
+      title: isFilled.keyText(page.data.meta_title)
+        ? page.data.meta_title
+        : undefined,
+      description: isFilled.keyText(page.data.meta_description)
+        ? page.data.meta_description
+        : undefined,
+      images: isFilled.image(page.data.meta_image)
+        ? [asImageSrc(page.data.meta_image)]
+        : undefined,
+    },
+  };
 }
