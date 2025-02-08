@@ -8,7 +8,7 @@ export default async function Footer() {
     const footer = await client.getSingle("footer");
 
     return (
-        <footer className="px-8 py-10 md:py-8 md:px-8 lg:py-10">
+        <footer className="relative px-8 py-10 md:py-8 md:px-8 lg:py-10 z-30 mt-auto">
             <div className="mx-auto max-w-[85%] w-full">
                 <div className="flex gap-4 items-center justify-between sm:flex-row flex-col">
                     <div>

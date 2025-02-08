@@ -43,7 +43,7 @@ const SidePanel: FC<SidePanelProps> = ({ slice }) => {
               {/* right side */}
               <div className="w-1/2 flex justify-end py-20">
                 <PrismicNextImage alt=""
-                  className="" 
+                  className="z-20" 
                   field={slice.primary.ui_cutout} 
                   />
               </div>  
@@ -65,7 +65,7 @@ const SidePanel: FC<SidePanelProps> = ({ slice }) => {
               {/* left side */}
               <div className="w-1/2 flex justify-begin py-20">
                 <PrismicNextImage alt=""
-                  className="" 
+                  className="z-20" 
                   field={slice.primary.ui_cutout} 
                   />
               </div>  

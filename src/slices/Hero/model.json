@@ -79,6 +79,22 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "back_glow": {
+          "type": "Image",
+          "config": {
+            "label": "back glow",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "back_grid": {
+          "type": "Image",
+          "config": {
+            "label": "back grid",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
       },
       "items": {}

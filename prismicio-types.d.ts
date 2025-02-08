@@ -355,9 +355,77 @@ export type BlowUpSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *BlowUp → Bottom → Primary*
+ */
+export interface BlowUpSliceBottomPrimary {
+  /**
+   * Main_label field in *BlowUp → Bottom → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blow_up.bottom.primary.main_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  main_label: prismic.KeyTextField;
+
+  /**
+   * Sub label field in *BlowUp → Bottom → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blow_up.bottom.primary.sub_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  sub_label: prismic.KeyTextField;
+
+  /**
+   * BlowUp Ui field in *BlowUp → Bottom → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blow_up.bottom.primary.blowup_ui
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  blowup_ui: prismic.ImageField<never>;
+
+  /**
+   * Back Glow field in *BlowUp → Bottom → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blow_up.bottom.primary.back_glow
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  back_glow: prismic.ImageField<never>;
+
+  /**
+   * Swoosh field in *BlowUp → Bottom → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blow_up.bottom.primary.swoosh
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  swoosh: prismic.ImageField<never>;
+}
+
+/**
+ * Bottom variation for BlowUp Slice
+ *
+ * - **API ID**: `bottom`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BlowUpSliceBottom = prismic.SharedSliceVariation<
+  "bottom",
+  Simplify<BlowUpSliceBottomPrimary>,
+  never
+>;
+
+/**
  * Slice variation for *BlowUp*
  */
-type BlowUpSliceVariation = BlowUpSliceDefault;
+type BlowUpSliceVariation = BlowUpSliceDefault | BlowUpSliceBottom;
 
 /**
  * BlowUp Shared Slice
@@ -457,6 +525,26 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   ui_mock: prismic.ImageField<never>;
+
+  /**
+   * back glow field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.back_glow
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  back_glow: prismic.ImageField<never>;
+
+  /**
+   * back grid field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.back_grid
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  back_grid: prismic.ImageField<never>;
 }
 
 /**
@@ -762,8 +850,10 @@ declare module "@prismicio/client" {
       AllDocumentTypes,
       BlowUpSlice,
       BlowUpSliceDefaultPrimary,
+      BlowUpSliceBottomPrimary,
       BlowUpSliceVariation,
       BlowUpSliceDefault,
+      BlowUpSliceBottom,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,

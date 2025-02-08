@@ -52,6 +52,55 @@
         }
       },
       "items": {}
+    },
+    {
+      "id": "bottom",
+      "name": "Bottom",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "main_label": {
+          "type": "Text",
+          "config": {
+            "label": "Main_label",
+            "placeholder": ""
+          }
+        },
+        "sub_label": {
+          "type": "Text",
+          "config": {
+            "label": "Sub label",
+            "placeholder": ""
+          }
+        },
+        "blowup_ui": {
+          "type": "Image",
+          "config": {
+            "label": "BlowUp Ui",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "back_glow": {
+          "type": "Image",
+          "config": {
+            "label": "Back Glow",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "swoosh": {
+          "type": "Image",
+          "config": {
+            "label": "Swoosh",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
     }
   ]
 }
