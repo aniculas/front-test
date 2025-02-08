@@ -13,12 +13,10 @@
       "imageUrl": "",
       "primary": {
         "intro_quote": {
-          "type": "StructuredText",
+          "type": "Text",
           "config": {
-            "label": "Intro Quote",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "heading1"
+            "label": "intro quote",
+            "placeholder": ""
           }
         },
         "subquote": {

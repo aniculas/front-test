@@ -18,7 +18,7 @@ const SideCards: FC<SideCardsProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="flex justify-center "
     >
-      <div className="flex flex-col gap-12 bg-[#0A0A0B] py-6">
+      <div className="flex flex-col gap-12 bg-[#0A0A0B] py-6 rounded-lg shadow-sm">
 
         <div className="flex flex-col text-center justify-center gap-6 sm:my-6 md:my-12">
           <h1 className="text-6xl font-bold leading-tight tracking-tight text-center">

@@ -22,9 +22,9 @@ const SidePanel: FC<SidePanelProps> = ({ slice }) => {
           <section
           data-slice-type={slice.slice_type}
           data-slice-variation={slice.variation}
-          className="bg-[#17161D] w-[70%]"
+          className="bg-[#17161D] w-[70%]  rounded-lg"
           >
-            <div className="flex items-center min-h-[400px] w-full">
+            <div className="flex items-center min-h-[400px] w-full shadow-sm">
 
               {/* left side */}
               <div className="flex flex-col gap-10 w-1/2 px-20 ml-10">

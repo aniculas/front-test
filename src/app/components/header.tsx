@@ -11,7 +11,7 @@ export default async function Header() {
 
     return (
         <header className="px-8 py-10 md:py-8 md:px-8 lg:py-10 ">
-            <div className="mx-auto max-w-[85%] w-full">
+            <div className="mx-auto max-w-[75%] w-full">
                 <div className="flex gap-4 items-center justify-between sm:flex-row flex-col">
                     
                     <div>

@@ -78,19 +78,6 @@
 				"type": "Text",
 				"value": "Organize, transform, & serve your entire photo library. The perfect image management app for freelancers, organizations, & web developers."
 			},
-			"intro_quote": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "heading1",
-						"content": {
-							"text": "Image management reimagined.",
-							"spans": []
-						},
-						"direction": "ltr"
-					}
-				]
-			},
 			"button_text": {
 				"__TYPE__": "FieldContent",
 				"type": "Text",
@@ -130,7 +117,6 @@
 				"thumbnails": {}
 			},
 			"back_grid": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
@@ -148,7 +134,15 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"intro_quote": {
+				"__TYPE__": "FieldContent",
+				"value": "amount",
+				"type": "Text"
 			}
 		},
 		"items": []

@@ -441,14 +441,14 @@ export type BlowUpSlice = prismic.SharedSlice<"blow_up", BlowUpSliceVariation>;
  */
 export interface HeroSliceDefaultPrimary {
   /**
-   * Intro Quote field in *Hero → Default → Primary*
+   * intro quote field in *Hero → Default → Primary*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
    * - **API ID Path**: hero.default.primary.intro_quote
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  intro_quote: prismic.RichTextField;
+  intro_quote: prismic.KeyTextField;
 
   /**
    * subquote field in *Hero → Default → Primary*
