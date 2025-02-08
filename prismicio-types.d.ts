@@ -319,6 +319,26 @@ export interface BlowUpSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   blowup_ui: prismic.ImageField<never>;
+
+  /**
+   * Back Glow field in *BlowUp → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blow_up.default.primary.back_glow
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  back_glow: prismic.ImageField<never>;
+
+  /**
+   * Swoosh field in *BlowUp → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blow_up.default.primary.swoosh
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  swoosh: prismic.ImageField<never>;
 }
 
 /**

@@ -33,6 +33,22 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "back_glow": {
+          "type": "Image",
+          "config": {
+            "label": "Back Glow",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "swoosh": {
+          "type": "Image",
+          "config": {
+            "label": "Swoosh",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
       },
       "items": {}
