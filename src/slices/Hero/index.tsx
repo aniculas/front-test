@@ -1,9 +1,7 @@
 import { FC } from "react";
 import { Content } from "@prismicio/client";
-import { JSXMapSerializer, PrismicRichText, SliceComponentProps } from "@prismicio/react";
-import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
-import Button from "@/app/components/button";
-import GlowBlobs from "@/app/components/glowblobs";
+import { JSXMapSerializer, SliceComponentProps } from "@prismicio/react";
+import { PrismicNextImage } from "@prismicio/next";
 
 const components: JSXMapSerializer = {
   heading1: ({children}) => (

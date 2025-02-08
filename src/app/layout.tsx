@@ -1,10 +1,12 @@
 import "./globals.css";
 import type { Metadata, ResolvingMetadata } from 'next';
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import clsx from "clsx";
-import { createClient } from "@/prismicio";
+import { createClient, repositoryName } from "@/prismicio";
 import Header from "./components/header";
-import Footer from "./components/footer";
+import { PrismicPreview } from "@prismicio/next";
+
+
 
 const inter = Inter({
   subsets: ['latin'],
@@ -12,15 +14,6 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 // implement dynamic metadata
 export async function generateMetadata(): Promise<Metadata> {
@@ -51,6 +44,7 @@ export default function RootLayout({
         <Header />
           {children}
         {/* <Footer /> */}
+        <PrismicPreview repositoryName={repositoryName} />
       </body>
       
     </html>
