@@ -1,5 +1,5 @@
 import "./globals.css";
-import type { Metadata, ResolvingMetadata } from 'next';
+import type { Metadata } from 'next';
 import { Inter } from "next/font/google";
 import clsx from "clsx";
 import { createClient, repositoryName } from "@/prismicio";

@@ -1,15 +1,9 @@
 import { FC } from "react";
 import { Content } from "@prismicio/client";
-import { JSXMapSerializer, SliceComponentProps } from "@prismicio/react";
+import { SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 
-const components: JSXMapSerializer = {
-  heading1: ({children}) => (
-    <h1 className="font-body text-5xl md:text-8xl font-extrabold leading-tight tracking-tight text-white">
-      {children}
-    </h1>
-  ),
-}
+
 
 export type HeroProps = SliceComponentProps<Content.HeroSlice>;
 

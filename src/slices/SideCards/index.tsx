@@ -34,9 +34,10 @@ const SideCards: FC<SideCardsProps> = ({ slice }) => {
             <PrismicNextImage alt="" field={slice.primary.ui_cutout} />
           </div>
           <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 h-[80%] my-auto">
-          {slice.primary.cards.map((item) => (
+          {slice.primary.cards.map((item, index) => (
             <div
-            className="p-8 rounded-xl bg-[#17161D] shadow-2xl transition-transform hover:scale-105"
+              key={index}
+              className="p-8 rounded-xl bg-[#17161D] shadow-2xl transition-transform hover:scale-105"
             >
               {/* Icon */}
               <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4">
