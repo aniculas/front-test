@@ -62,7 +62,7 @@ const BlowUp: FC<BlowUpProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="relative flex flex-col justify-center items-center"
       >
-      <div className="absolute z-10 w-full -translate-y-[20%] overflow-visible">
+      <div className="absolute z-10 w-full -translate-y-[20%]">
         <PrismicNextImage draggable="false" alt="" 
         className="w-full" 
         field={slice.primary.back_glow} 
